@@ -1,0 +1,15 @@
+node_modules/
+dist/
+out/
+.sites-runtime/
+.local/
+.openai/
+artifacts/
+cache/
+.tools/
+.ipfs/
+.env*
+!.env.example
+public/deployment.json
+test-results/
+*.zip

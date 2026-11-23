@@ -1,0 +1,45 @@
+{
+  "name": "mach-social",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "chain": "hardhat node --hostname 127.0.0.1",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts --network localhost",
+    "seed": "hardhat run scripts/seed.ts --network localhost",
+    "test": "hardhat run test/social.ts",
+    "test:wallet": "node --test test/wallet-session.test.ts",
+    "ipfs:install": "node scripts/install-ipfs.mjs",
+    "ipfs": "node scripts/ipfs.mjs",
+    "api": "node server/index.mjs",
+    "start": "node server/index.mjs --serve",
+    "demo": "node scripts/demo.mjs",
+    "accounts": "node scripts/accounts.mjs",
+    "test:integration": "node test/integration.mjs",
+    "build:hosted": "node scripts/build-hosted.mjs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "ethers": "^6.15.0",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.0",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "hardhat": "^3.1.0",
+    "solc": "0.8.28",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.2"
+  }
+}
